@@ -35,20 +35,10 @@ Using ipconfig /release and /renew
 DHCP on multi-router topologies
 
 🔍 Useful Cisco Commands
-show ip dhcp pool
-show ip dhcp binding
-show ip dhcp conflict
-show running-config | section dhcp
-ip helper-address <server-ip>
-ipconfig /release
-ipconfig /renew
-
-✔ What These Labs Prove
-
-You understand how DHCP works at a deep level
-
-You can diagnose why devices aren't receiving an IP
-
-You can fix misconfigured pools, gateways, DNS, helper-addresses
-
-You can test and verify end-to-end connectivity
+  - show ip dhcp pool
+  - show ip dhcp binding
+  - show ip dhcp conflict
+  - show running-config | section dhcp
+  - ip helper-address <server-ip>
+  - ipconfig /release
+  - ipconfig /renew
