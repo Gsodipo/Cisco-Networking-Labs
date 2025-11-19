@@ -33,11 +33,11 @@ This folder contains multiple routing labs covering IPv4 and IPv6 routing.
   - WAN topology routing
 
 🔍 Useful Cisco Commands
-show ip route
-show ipv6 route
-show ip protocols
-show ip bgp summary
-show ip eigrp neighbors
-show ip ospf neighbor
-debug ip routing
-traceroute <ip>
+    - show ip route
+    - show ipv6 route
+    - show ip protocols
+    - show ip bgp summary
+    - show ip eigrp neighbors
+    - show ip ospf neighbor
+    - debug ip routing
+    - traceroute <ip>
