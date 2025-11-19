@@ -4,19 +4,19 @@ by Gsodipo
 This repository contains a collection of Cisco networking labs completed as part of CCNA-level coursework and practical networking training.
 The labs demonstrate hands-on skills in:
 
-IPv4 / IPv6 networking
-
-DHCP configuration & troubleshooting
-
-Static & dynamic routing (EIGRP, OSPF, eBGP)
-
-Extended & IPv6 ACLs
-
-VLAN connectivity
-
-Troubleshooting real-world scenarios
-
-Packet Tracer simulations
+  - IPv4 / IPv6 networking
+  
+  - DHCP configuration & troubleshooting
+  
+  - Static & dynamic routing (EIGRP, OSPF, eBGP)
+  
+  - Extended & IPv6 ACLs
+  
+  - VLAN connectivity
+  
+  - Troubleshooting real-world scenarios
+  
+  - Packet Tracer simulations
 
 Each folder represents a different category of networking tasks, with Packet Tracer (.pka) files and troubleshooting documentation.
 
@@ -31,31 +31,31 @@ Cisco-Networking-Labs/
 
 Each folder contains:
 
-Packet Tracer files
-
-Troubleshooting documents (.docx/.txt)
-
-Detailed README explaining skills gained
+  - Packet Tracer files
+  
+  - Troubleshooting documents (.docx/.txt)
+  
+  - Detailed README explaining skills gained
 
 🛠 Skills Demonstrated
 
-Configuring and verifying DHCP pools
-
-Implementing and troubleshooting helper-address
-
-IPv4 & IPv6 addressing and connectivity testing
-
-Extended IPv4 ACLs & IPv6 ACL filtering
-
-Static routes, next-hop issues, and route debugging
-
-EIGRP & OSPF configuration + redundancy
-
-eBGP peer configuration
-
-End-to-end network troubleshooting
-
-Packet Tracer simulations and network validation
+  - Configuring and verifying DHCP pools
+  
+  - Implementing and troubleshooting helper-address
+  
+  - IPv4 & IPv6 addressing and connectivity testing
+  
+  - Extended IPv4 ACLs & IPv6 ACL filtering
+  
+  - Static routes, next-hop issues, and route debugging
+  
+  - EIGRP & OSPF configuration + redundancy
+  
+  - eBGP peer configuration
+  
+  - End-to-end network troubleshooting
+  
+  - Packet Tracer simulations and network validation
 
 🎓 Why This Portfolio Is Important
 
