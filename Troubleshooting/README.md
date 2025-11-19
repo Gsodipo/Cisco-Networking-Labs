@@ -27,10 +27,10 @@ This folder contains scenario-based troubleshooting labs documenting real networ
   - Using structured troubleshooting methodology
 
 🔍 Useful Commands
-    ping
-    traceroute
-    show ip interface brief
-    show run
-    show access-lists
-    show ip dhcp pool
-    show ip route
+    - ping
+    - traceroute
+    - show ip interface brief
+    - show run
+    - show access-lists
+    - show ip dhcp pool
+    - show ip route
