@@ -1,0 +1,68 @@
+1. I changed the IP settings on each workstation to automatic and verify their 
+addresses once more. Both IPv4 and IPv6 is set to automatic. 
+
+2. I used to the shop ip dhcp conflict command to see any type of conflict in the router and when i used the command it was empty
+R2#sh ip dhcp conflict
+IP address        Detection method   Detection time          VRF
+
+
+3. I used the show ip dhcp pool command to see if there was a problem with the pool, the pool turned out to be fine.
+
+R2#sh ip dhcp pool
+
+Pool LAN4_10 :
+ Utilization mark (high/low)    : 100 / 0
+ Subnet size (first/next)       : 0 / 0 
+ Total addresses                : 254
+ Leased addresses               : 0
+ Excluded addresses             : 1
+ Pending event                  : none
+
+ 1 subnet is currently in the pool
+ Current index        IP address range                    Leased/Excluded/Total
+ 10.10.10.1           10.10.10.1       - 10.10.10.254      0    / 1     / 254
+
+4. I used the show run command on R2 to see the issue with the DHCP settings on the router. Everything seemed to be fine
+hostname R2
+!
+!
+!
+enable secret 5 $1$mERr$WvpW0n5HghRrqnrwXCUUl.
+!
+!
+ip dhcp excluded-address 10.10.10.1 10.10.10.100
+!
+ip dhcp pool LAN4_10
+ network 10.10.10.0 255.255.255.0
+ default-router 10.10.10.1
+ dns-server 10.10.20.1
+ domain-name ccnp4lab.com
+
+
+5. I used the show ip dhcp binding command to display DHCP binding information for IP address assignment and subnet allocation. It was empty
+R2#sh ip dhcp binding
+IP address       Client-ID/              Lease expiration        Type
+                 Hardware address
+
+6. I went to router R1 and i was able to  see the issue with the DHCP settings on the router. On inspection in interface G0/0/1 there is no helper address interface whereas
+in G0/0/0 we can see the ip address.
+interface GigabitEthernet0/0/0
+ ip address 10.10.20.1 255.255.255.0
+ ip helper-address 10.10.20.254
+ duplex auto
+ speed auto
+ ipv6 address FE80::1:1 link-local
+ ipv6 address 2001:DB8:A:B::1/64
+!
+interface GigabitEthernet0/0/1
+ ip address 10.10.10.1 255.255.255.0
+ duplex auto
+ speed auto
+ ipv6 address FE80::1:2 link-local
+ ipv6 address 2001:DB8:A:A::1/64
+!
+
+To solve this issue i went into G0/0/1 and configired the ip helper address using the same ip address as the one in G0/0/0
+R1(config)#int g0/0/1
+R1(config-if)#ip helper-address 10.10.20.254
+R1(config-if)#
